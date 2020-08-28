@@ -1,0 +1,5 @@
+#!/bin/bash
+echo -en "Nome file da compilare:"
+read ${FILE:="main"}
+echo "Compilo: ./${FILE}"
+g++ ${FILE}.cpp -o run -lglfw3 -pthread -ldl -lGLU -lGL -lrt -lXrandr -lXxf86vm -lXi -lXinerama -lX11 -lGLEW
