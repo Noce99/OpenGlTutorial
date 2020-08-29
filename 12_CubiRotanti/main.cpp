@@ -56,7 +56,7 @@ void setupVertices(){
 
 void init (GLFWwindow* window){
     renderingProgram = createShaderProgram((char *)"vertShader.glsl",(char *) "fragShader.glsl");
-    cameraX = 0.0f; cameraY = 0.0f; cameraZ = 8.0f;
+    cameraX = 0.0f; cameraY = 0.0f; cameraZ = 25.0f;
     setupVertices();
 }
 
@@ -75,37 +75,41 @@ void display (GLFWwindow* window, double currentTime){
     aspect = (float)width / (float)height;
     pMat = glm::perspective(1.0472f, aspect, 0.1f, 1000.0f); //1.0472 radians = 60 degrees
     
-    //Faccio Varie Traslazioni in cui uso il tempo
-    tMat = glm::translate(glm::mat4(1.0f), glm::vec3(   sin(0.35f*currentTime)*2.0f,
-                                                        cos(0.52f*currentTime)*2.0f,
-                                                        sin(0.70f*currentTime)*2.0f  ));
-    rMat = glm::rotate(glm::mat4(1.0f), 1.75f*(float)currentTime, glm::vec3(0.0f, 1.0f, 0.0f));
-    rMat = glm::rotate(rMat, 1.75f*(float)currentTime, glm::vec3(1.0f, 0.0f, 0.0f));
-    rMat = glm::rotate(rMat, 1.75f*(float)currentTime, glm::vec3(0.0f, 0.0f, 1.0f));
-    
-    //Costruisco la mvMat
-    vMat = glm::translate(glm::mat4(1.0f), glm::vec3(-cameraX, -cameraY, -cameraZ));
-    mMat = tMat*rMat;
-    mvMat = vMat * mMat;
-    
-    //Spedisco matrici allo shader
-    glUniformMatrix4fv(mvLoc, 1, GL_FALSE, glm::value_ptr(mvMat));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(pMat));
-    
-    //Associazione VBO
-    glBindBuffer(GL_ARRAY_BUFFER, vbo[0]);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-    glEnableVertexAttribArray(0);
-    glEnable(GL_DEPTH_TEST);
-    glDepthFunc(GL_LEQUAL);
-    glDrawArrays(GL_TRIANGLES, 0, 36);
+    for (int i=0; i<24; i++){
+        //Fattore che distingue un cubo dall'altro!
+        double tf = currentTime + i*10;
+        //Faccio Varie Traslazioni in cui uso il tempo
+        tMat = glm::translate(glm::mat4(1.0f), glm::vec3(   sin(0.35f*tf)*6.0f,
+                                                            cos(0.52f*tf)*6.0f,
+                                                            sin(0.70f*tf)*6.0f  ));
+        rMat = glm::rotate(glm::mat4(1.0f), 1.75f*(float)tf, glm::vec3(0.0f, 1.0f, 0.0f));
+        rMat = glm::rotate(rMat, 1.75f*(float)tf, glm::vec3(1.0f, 0.0f, 0.0f));
+        rMat = glm::rotate(rMat, 1.75f*(float)tf, glm::vec3(0.0f, 0.0f, 1.0f));
+        
+        //Costruisco la mvMat
+        vMat = glm::translate(glm::mat4(1.0f), glm::vec3(-cameraX, -cameraY, -cameraZ));
+        mMat = tMat*rMat;
+        mvMat = vMat * mMat;
+        
+        //Spedisco matrici allo shader
+        glUniformMatrix4fv(mvLoc, 1, GL_FALSE, glm::value_ptr(mvMat));
+        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(pMat));
+        
+        //Associazione VBO
+        glBindBuffer(GL_ARRAY_BUFFER, vbo[0]);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+        glEnableVertexAttribArray(0);
+        glEnable(GL_DEPTH_TEST);
+        glDepthFunc(GL_LEQUAL);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+    }
 }
 
 int main(void){
     if (!glfwInit()) {exit(EXIT_FAILURE);}
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    GLFWwindow* window = glfwCreateWindow(600, 600, "11_CuboRotante", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(600, 600, "12_CubiRotanti", NULL, NULL);
     glfwMakeContextCurrent(window);
     if (glewInit() != GLEW_OK){exit(EXIT_FAILURE);}
     glfwSwapInterval(1);
