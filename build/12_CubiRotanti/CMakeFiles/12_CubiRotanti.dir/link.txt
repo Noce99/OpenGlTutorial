@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/12_CubiRotanti.dir/main.cpp.o -o ../Executables/12_CubiRotanti/12_CubiRotanti  /usr/lib/libglfw.so.3.3 /usr/lib/libGLEW.so.2.2 /usr/lib/libGL.so 

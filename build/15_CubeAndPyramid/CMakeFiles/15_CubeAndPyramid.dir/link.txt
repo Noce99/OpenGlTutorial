@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/15_CubeAndPyramid.dir/main.cpp.o -o ../Executables/15_CubeAndPyramid/15_CubeAndPyramid  /usr/lib/libglfw.so.3.3 /usr/lib/libGLEW.so.2.2 /usr/lib/libGL.so 

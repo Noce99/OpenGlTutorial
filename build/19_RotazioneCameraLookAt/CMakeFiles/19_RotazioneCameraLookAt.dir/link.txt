@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/19_RotazioneCameraLookAt.dir/main.cpp.o -o ../Executables/19_RotazioneCameraLookAt/19_RotazioneCameraLookAt  /usr/lib/libglfw.so.3.3 /usr/lib/libGLEW.so.2.2 /usr/lib/libGL.so 

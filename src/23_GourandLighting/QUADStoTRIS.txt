@@ -1,0 +1,3 @@
+Edit Mode
+poi seleziona le facce
+poi Cntrl+T

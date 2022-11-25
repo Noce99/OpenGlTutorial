@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/06_DisegnareUnTriangolo.dir/main.cpp.o -o ../Executables/06_DisegnareUnTriangolo/06_DisegnareUnTriangolo  /usr/lib/libglfw.so.3.3 /usr/lib/libGLEW.so.2.2 /usr/lib/libGL.so 

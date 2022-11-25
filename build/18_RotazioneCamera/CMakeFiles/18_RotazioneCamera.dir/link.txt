@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/18_RotazioneCamera.dir/main.cpp.o -o ../Executables/18_RotazioneCamera/18_RotazioneCamera  /usr/lib/libglfw.so.3.3 /usr/lib/libGLEW.so.2.2 /usr/lib/libGL.so 

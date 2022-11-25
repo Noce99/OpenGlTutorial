@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/01_FinestraColorata.dir/main.cpp.o -o ../Executables/01_FinestraColorata/01_FinestraColorata  /usr/lib/libglfw.so.3.3 /usr/lib/libGLEW.so.2.2 /usr/lib/libGL.so 
