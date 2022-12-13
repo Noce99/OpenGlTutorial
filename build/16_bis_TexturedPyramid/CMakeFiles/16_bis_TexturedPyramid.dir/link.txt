@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/16_bis_TexturedPyramid.dir/main.cpp.o -o ../Executables/16_bis_TexturedPyramid/16_bis_TexturedPyramid  /usr/lib/libglfw.so.3.3 /usr/lib/libGLEW.so.2.2 /usr/lib/libGL.so /usr/local/lib/libsoil2.a 

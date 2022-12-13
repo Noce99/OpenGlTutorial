@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/23_GourandLighting.dir/main.cpp.o -o ../Executables/23_GourandLighting/23_GourandLighting  /usr/lib/libglfw.so.3.3 /usr/lib/libGLEW.so.2.2 /usr/lib/libGL.so 

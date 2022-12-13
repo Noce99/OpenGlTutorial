@@ -45,6 +45,9 @@
 /home/enrico/Documenti/Programmazione/OpenGlC++/build/16_CubicSolarSystem/CMakeFiles/16_CubicSolarSystem.dir
 /home/enrico/Documenti/Programmazione/OpenGlC++/build/16_CubicSolarSystem/CMakeFiles/edit_cache.dir
 /home/enrico/Documenti/Programmazione/OpenGlC++/build/16_CubicSolarSystem/CMakeFiles/rebuild_cache.dir
+/home/enrico/Documenti/Programmazione/OpenGlC++/build/16_bis_TexturedPyramid/CMakeFiles/16_bis_TexturedPyramid.dir
+/home/enrico/Documenti/Programmazione/OpenGlC++/build/16_bis_TexturedPyramid/CMakeFiles/edit_cache.dir
+/home/enrico/Documenti/Programmazione/OpenGlC++/build/16_bis_TexturedPyramid/CMakeFiles/rebuild_cache.dir
 /home/enrico/Documenti/Programmazione/OpenGlC++/build/17_OggettoRotante/CMakeFiles/17_OggettoRotante.dir
 /home/enrico/Documenti/Programmazione/OpenGlC++/build/17_OggettoRotante/CMakeFiles/edit_cache.dir
 /home/enrico/Documenti/Programmazione/OpenGlC++/build/17_OggettoRotante/CMakeFiles/rebuild_cache.dir
